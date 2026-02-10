@@ -11,8 +11,12 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 | **Application** | API (.NET 9 / Node 24) | Azure App Service |
 | **Data** | SQL Server (Dev) | Azure SQL Database (Serverless) |
 
-## Status Projektu i Dokumentacja
-* [X] **Artefakt 1:** Zaplanowano strukturę folderów i diagram C4 (dostępny w `/docs`).
-* [X] **Artefakt 2:** Konfiguracja środowiska Docker (w trakcie...).
+## 🚦 Status Projektu
+* [x] **Artefakt 1:** Architektura i struktura folderów (Diagram C4).
+* [x] **Artefakt 2:** Środowisko wielokontenerowe uruchomione lokalnie (Docker Compose).
+* [x] **Artefakt 3:** Działająca warstwa prezentacji (React + Vite w Dockerze).
+
+### 📝 Podsumowanie etapu
+Trzeci artefakt został osiągnięty. Nasza architektura przestała być jedynie statycznym schematem – stała się funkcjonalnym, odizolowanym systemem. Front-end jest gotowy, skonteneryzowany i poprawnie serwowany przez Nginx na porcie 8080.
 
 > **Informacja:** Ten plik będzie ewoluował. W kolejnych etapach dodamy tutaj sekcje 'Quick Start', opis zmiennych środowiskowych oraz instrukcję wdrożenia (CI/CD).
