@@ -15,6 +15,7 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 * [x] **Artefakt 1:** Architektura i struktura folderów (Diagram C4).
 * [x] **Artefakt 2:** Środowisko wielokontenerowe uruchomione lokalnie (Docker Compose).
 * [x] **Artefakt 3:** Działająca warstwa prezentacji (React + Vite w Dockerze).
+* [x] **Artefakt 3:** Działająca warstwa logiki backendu (.NET 9 + SQL Connection).
 
 ### 📝 Podsumowanie etapu
 Trzeci artefakt został osiągnięty. Nasza architektura przestała być jedynie statycznym schematem – stała się funkcjonalnym, odizolowanym systemem. Front-end jest gotowy, skonteneryzowany i poprawnie serwowany przez Nginx na porcie 8080.
