@@ -15,9 +15,16 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 * [x] **Artefakt 1:** Architektura i struktura folderów (Diagram C4).
 * [x] **Artefakt 2:** Środowisko wielokontenerowe uruchomione lokalnie (Docker Compose).
 * [x] **Artefakt 3:** Działająca warstwa prezentacji (React + Vite w Dockerze).
-* [x] **Artefakt 3:** Działająca warstwa logiki backendu (.NET 9 + SQL Connection).
+* [x] **Artefakt 4:** Działająca warstwa logiki backendu (.NET 9 + SQL Connection).
+* [x] **Artefakt 5:** Trwałość danych i profesjonalny kontrakt API (EF Migrations + DTO + UI Form).
 
-### 📝 Podsumowanie etapu
-Trzeci artefakt został osiągnięty. Nasza architektura przestała być jedynie statycznym schematem – stała się funkcjonalnym, odizolowanym systemem. Front-end jest gotowy, skonteneryzowany i poprawnie serwowany przez Nginx na porcie 8080.
+## 🚀 Quick Start (Local EF)
+Jeśli uruchamiasz projekt po raz pierwszy z bazą danych, wykonaj w terminalu:
+
+. **Uruchomienie infrastruktury:**
+   ```bash
+   docker compose up -d
+   cd backend && dotnet ef database update
+
 
 > **Informacja:** Ten plik będzie ewoluował. W kolejnych etapach dodamy tutaj sekcje 'Quick Start', opis zmiennych środowiskowych oraz instrukcję wdrożenia (CI/CD).
