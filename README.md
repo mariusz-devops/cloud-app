@@ -26,4 +26,4 @@ Adres frontend: https://www.cloud-task-manager-frontend-dtdme9ekavhpfegg.germany
 Adres backend: https://cloud-task-manager-api-h9fsfpd4gnaeaddz.germanywestcentral-01.azurewebsites.net 
 
 
-> **Informacja:** Ten plik będzie ewoluował. W kolejnych etapach dodamy tutaj sekcje 'Quick Start', opis zmiennych środowiskowych oraz instrukcję wdrożenia (CI/CD).
+> **Informacja:** Ten plik będzie ewoluował. 
