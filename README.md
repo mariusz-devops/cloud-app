@@ -1,9 +1,9 @@
-# Cloud Task Manager (2026)
+# Cloud Task Manager - Książka Azure w Praktyce by Mariusz Dworniczak
 
 Projekt natywnej aplikacji chmurowej realizowany w architekturze 3-warstwowej. 
 
 ## Deklaracja Architektury (Mapowanie Azure)
-Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Service) w regionie **Poland Central**.
+Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Service) w  chmurze Azure
 
 | Warstwa | Komponent Lokalny | Usługa Azure |
 | :--- | :--- | :--- |
@@ -17,14 +17,13 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 * [x] **Artefakt 3:** Działająca warstwa prezentacji (React + Vite w Dockerze).
 * [x] **Artefakt 4:** Działająca warstwa logiki backendu (.NET 9 + SQL Connection).
 * [x] **Artefakt 5:** Trwałość danych i profesjonalny kontrakt API (EF Migrations + DTO + UI Form).
+* [x] **Artefakt 6:**  Aplikacja przemigrowana do Azure !
 
-## 🚀 Quick Start (Local EF)
-Jeśli uruchamiasz projekt po raz pierwszy z bazą danych, wykonaj w terminalu:
+## 🚀 Adresy do uruchomenia:
 
-. **Uruchomienie infrastruktury:**
-   ```bash
-   docker compose up -d
-   cd backend && dotnet ef database update
+Adres frontend: https://www.cloud-task-manager-frontend-dtdme9ekavhpfegg.germanywestcentral-01.azurewebsites.net
+
+Adres backend: https://cloud-task-manager-api-h9fsfpd4gnaeaddz.germanywestcentral-01.azurewebsites.net 
 
 
 > **Informacja:** Ten plik będzie ewoluował. W kolejnych etapach dodamy tutaj sekcje 'Quick Start', opis zmiennych środowiskowych oraz instrukcję wdrożenia (CI/CD).
