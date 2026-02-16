@@ -18,6 +18,7 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 * [x] **Artefakt 4:** Działająca warstwa logiki backendu (.NET 9 + SQL Connection).
 * [x] **Artefakt 5:** Trwałość danych i profesjonalny kontrakt API (EF Migrations + DTO + UI Form).
 * [x] **Artefakt 6:**  Aplikacja przemigrowana do Azure !
+* [x] **Artefakt 7:** Pełna integracja z chmurą. Aplikacja korzysta z tożsamości zarządzanej i Magazynu kluczy. 
 
 ## 🚀 Adresy do uruchomenia:
 
