@@ -2,8 +2,7 @@ name: Build and deploy Node.js app to Azure Web App - cloud-task-manager-fronten
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -11,23 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '24.x'
+          node-version: '24'
 
-      - name: Build application
+      - name: Build
         run: |
           npm install
           npm run build
         working-directory: ./frontend
+        env:
+          VITE_API_URL: "https://cloud-task-manager-backend.azurewebsites.net"
 
-      - name: Upload build artifact
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ./frontend/dist
+          path: frontend/dist/
 
   deploy:
     runs-on: ubuntu-latest
@@ -35,13 +35,12 @@ jobs:
     permissions:
       id-token: write
       contents: read
-
     steps:
-      - name: Download build artifact
+      - name: Download
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: deploy_dist
+          path: dist
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -50,9 +49,9 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_221146B4BDE94D70BAEE6E70682C30DA }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1B9E85D4326F4A3D8B6AA5944A7CEAB8 }}
 
-      - name: Deploy to Azure Web App
+      - name: Deploy
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'cloud-task-manager-frontend'
-          package: ./deploy_dist
-          startup-command: "npx serve -s . -p 8080"
+          package: dist
+          startup-command: "pm2 serve /home/site/wwwroot --no-daemon --spa"
