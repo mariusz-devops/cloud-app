@@ -55,6 +55,6 @@ jobs:
         with:
           app-name: 'cloud-task-manager-frontend'
           slot-name: 'Production'
-          package: ./frontend
+          package: .
 
           
