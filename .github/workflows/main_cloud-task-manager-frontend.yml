@@ -62,5 +62,7 @@ jobs:
           app-name: 'cloud-task-manager-frontend'
           slot-name: 'Production'
           package: .
+          # To polecenie omija npx i package.json:
+          startup-command: "pm2 serve /home/site/wwwroot --no-daemon --spa"
 
           
